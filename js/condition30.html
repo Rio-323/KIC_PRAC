@@ -8,14 +8,21 @@
 </head>
 <body>
     <script type="text/javascript">
-
-        for(let i = 10; i > 0; i--) {
-            let star = '';
-            for(let j = 1; j <= i; j++) {
-                star += '*';
+        console.log('시작');
+        
+        aloop : 
+        for(let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= 5; j++) {
+                if (j == 2) {
+                   //break;
+                   continue aloop;
+                }
+                console.log(i + ' : ' + j);
             }
-            console.log(star);
         }
+
+        console.log('끝');
+        
     </script>
 </body>
 </html>

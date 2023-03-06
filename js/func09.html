@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript">
+       // 익명함수
+       const doFunc1 = function() {
+        console.log('Hello Function');
+       }
+    </script>
 </head>
 <body>
     <script type="text/javascript">
-
-        for(let i = 10; i > 0; i--) {
-            let star = '';
-            for(let j = 1; j <= i; j++) {
-                star += '*';
-            }
-            console.log(star);
-        }
+       doFunc1();
+       console.log(doFunc1);
+       console.log(typeof doFunc1);
     </script>
 </body>
 </html>

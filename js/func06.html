@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 산술연산 함수
+        // 세 수를 입력받아서 큰 수를 반환하는 함수
+
+        function maxNumber(a, b, c) {
+            let max = a;
+            let min = a;
+
+            if (b > max) {
+                max = b;
+            }
+            if (c > max) {
+                max = c;
+            }
+
+            if (b < min) {
+                min = b;
+            }
+            if (c < min) {
+                min = c;
+            }
+
+            console.log(`가장 큰 수: ${max}`);
+            console.log(`가장 작은 수: ${min}`);
+
+            if (a === b && b === c) {
+                console.log('세 수가 모두 같습니다.');
+            } else if (a === b || b === c || a === c) {
+                console.log('두 수가 같습니다.');
+            } 
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+       maxNumber(1, 2, 3);
+    </script>
+</body>
+</html>

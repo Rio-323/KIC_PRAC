@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table {
+            border: 1px solid black;
+            width: 1000px;
+            border-collapse: collapse
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+
+
+    <script type="text/javascript">
+
+        // 제어 구문과 출력문을 분리
+        let result = '';
+    
+        result += '<table>';
+            for(let i = 0; i <= 9; i++) {
+                result +='<tr>';
+                
+                for(let j = 0; j <= 9; j++) {
+                    if( i == 0 && j == 0) {
+                        result +='<td></td>';
+                    }else if(i == 0) {
+                        result +='<td>X' + j + '</td>';
+                    }else if( j == 0) {
+                        result +='<td>' + i + '단' + '</td>';
+                    } else {
+                        result +='<td>' + i + ' X ' + j + ' = ' + (i*j) + '</td>';
+                    }    
+                }
+                result +='</tr>'
+            }
+            result +='</table>';
+
+            document.write(result);
+    </script>
+</body>
+</html>

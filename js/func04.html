@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 산술연산 함수
+        // calc(10, '+', 20)
+
+        function calc(num1, data1, num2) {
+            switch(data1) {
+                case '+' : console.log(num1 + ' + ' + num2 + ' = ' + (num1 + num2)); break;
+                case '-' : console.log(num1 + ' - ' + num2 + ' = ' + (num1 - num2)); break;
+                case '*' : console.log(num1 + ' X ' + num2 + ' = ' + (num1 * num2)); break;
+                case '/' : console.log(num1 + ' / ' + num2 + ' = ' + (num1 / num2)); break;
+                default : console.log('데이터 값을 다시 확인해주세요.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+       calc(10, '/', 20);
+    </script>
+</body>
+</html>
