@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+      let one = 100;
+      var two = 200;
+
+      const doFunc1 = function() {
+        let one = 110;
+        var two = 210;
+
+        console.log('doFunc1 호출 : ' + one);
+        console.log('doFunc1 호출 : ' + two);
+      }
+
+      console.log('one : ' + one);
+      console.log('two : ' + two);
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+      doFunc1();
+    </script>
+</body>
+</html>

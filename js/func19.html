@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+      // 경고창(알림창)
+      //alert('난 알림창');
+      // confirm('난 확인창');
+
+      /* if(confirm('난 확인창')) {
+        console.log('확인 선택');
+      } else {
+        console.log('취소 선택');
+      } */
+
+      // 입력창
+      // prompt('난 입력창');
+      // prompt('난 입력창', '초기값');
+
+      let value = prompt('난 입력창', '초기값');
+      // console.log(value);
+
+      if(value) {
+        // , : comsole.log에서 사용되는 문자열 연결 연산자
+        console.log('확인', value);
+      } else {
+        console.log('취소');
+      }
+    </script>
+</body>
+</html>

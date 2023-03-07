@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+      let data1 = 10;
+      let data2 = '20';
+
+      let sum = data1 + data2;
+      let sum2 = Number(data1) + Number(data2);
+
+      console.log(sum);
+      console.log(sum2);
+
+      let data3 = '10일';
+      // NaN = Not a Number
+      console.log(Number(data3));
+      console.log(parseInt(data3));
+      console.log(parseFloat(data3));
+
+      // NaN 판별
+      // 제어문과 같이 쓸 수 있음
+      console.log(isNaN('1'));
+      console.log(isNaN('1e'));
+      console.log(isNaN('e1'));
+
+      if(isNaN(1)) {
+        console.log('숫자가 아닙니다.');
+      }else {
+        console.log('숫자 입니다.');
+      }
+    </script>
+</body>
+</html>

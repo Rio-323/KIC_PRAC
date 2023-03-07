@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // viewMaxValue 함수
+        /* function viewMaxValue(...numbers) {
+            if (numbers.length == 0) {
+                console.log("배열이 존재하지 않습니다.");
+                return undefined; // 혹은 다른 값을 반환
+            }
+            
+            let max = numbers[0];
+            for (let i = 1; i < numbers.length; i++) {
+                if (numbers[i] > max) {
+                max = numbers[i];
+                }
+            }
+            
+            return max;
+        }*/
+
+        const viewMaxValue = function() {
+            let maxValue = 0;
+
+            for(const value of arguments) {
+                if(value >= maxValue) {
+                    maxValue = value
+                }
+            }
+
+            // return maxValue;
+            alert('최대값 : ' + maxValue);
+        }
+
+        
+        // console.log(viewMaxValue(3, 1, 6));
+        // console.log(viewMaxValue(3, 1, 9, 6));
+
+    </script>
+    <a href="javascript:viewMaxValue(3, 1, 9, 6)">최대값 찾기</a>
+</body>
+</html>

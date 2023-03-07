@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+      // 익명함수
+       const doFunc1 = function() {
+        console.log('doFunc1 호출');
+       }
+
+       // 화살표 함수
+       const doFunc2 = () => {
+        console.log('doFunc2 호출');
+       }
+
+       const doFunc3 = (one) => {
+        console.log('doFunc3 호출 : ' + one);
+       }
+
+       const doFunc4 = (one, two) => {
+        return one + two;
+       }
+
+       const doFunc5 = (one, two) => one + two;
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+      doFunc1();
+      doFunc2();
+      doFunc3(10);
+      console.log('결과 : ' + doFunc4(10, 20));
+      console.log('결과 : ' + doFunc5(10, 20));
+    </script>
+</body>
+</html>

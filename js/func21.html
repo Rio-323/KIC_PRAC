@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+      const work = function() {
+        console.log('work 함수 실행');
+      }
+
+      // 스레드
+      console.log('시작');
+      // setTimeout(work, 3000);
+      // callback 함수
+      // setTimeout(function() {
+      //   console.log('work 함수 실행');
+      // }, 3000);
+
+      setInterval(function() {
+        console.log('work 함수 실행');
+       }, 3000);
+       
+      console.log('끝');
+    </script>
+</body>
+</html>
