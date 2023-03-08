@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 주민등록번호 형식 검사 프로그램
+        // 출력결과 형식이 맞음 / 형식이 틀림
+
+        // 980323-*******
+        // 234567 892345
+
+        function checkNumber(data1) {
+            
+            if(data1.includes('-') && data1.length == 14) {
+                let word = data1.split('-');
+                if(word[1][0] == 1 || word[1][0] == 2 || word[1][0] == 3 || word[1][0] == 4)  {
+                    let sum = (word[0][0] * 2) + (word[0][1] * 3) + (word[0][2] * 4) + (word[0][3] * 5) + 
+                              (word[0][4] * 6) + (word[0][5] * 7) + (word[1][0] * 8) + (word[1][1] * 9) + 
+                              (word[1][2] * 2) + (word[1][3] * 3) + (word[1][4] * 4) + (word[1][5] * 5); 
+
+                    let result = (11 - (sum % 11)) % 10;
+
+                    if(result == data1[data1.length - 1]) {
+                        console.log('주민등록번호 끝자리의 수 : ' + data1[data1.length - 1] + '과 계산결과의 수 : ' + result + '값이 같아서 주민등록번호 형식이 맞습니다.');
+                    } else {
+                    console.log('형식에 맞지 않습니다.');
+                    }
+
+                } else {
+                    console.log('형식에 맞지 않습니다.');
+                }
+            }
+        }
+
+        checkNumber('980323-1621716');
+       
+    </script>
+</body>
+</html>
