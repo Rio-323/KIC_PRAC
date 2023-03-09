@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+       function checkFrm() {
+           
+           let data1 = document.frm1.data1.value;
+           
+            let words = data1.split(' ');
+            let str1 = '';
+
+            for(let i = 0; i < words.length; i++) {
+                str1 += words[i].substring(0,1).toUpperCase() + words[i].substring(1) + ' ';
+            }
+
+            document.frm1.data2.value = str1;
+        }
+        
+    </script>
+
+    <form name="frm1" action="test1.html">
+        data1 : <input type="text" name="data1" value="값1"><br>
+        <input type="'button" value="내용 읽기" onclick="checkFrm()"></input><br>
+        data2 : <input type="text" name="data2" value="값2"><br>
+    </form>
+</body>
+</html>

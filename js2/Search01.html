@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+       function checkFrm() {
+            let search = document.frm.query.value
+            
+            if(document.frm.sitename.options.selectedIndex == 0) {
+                location.href = `https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=${search}`;
+            } else {
+                location.href = `https://search.daum.net/search?w=tot&DA=UME&t__nil_searchbox=suggest&sug=&sugo=15&sq=rnlaufdml+zkf&o=1&q=${search}`;
+            }
+        }
+        
+    </script>
+
+    <form name="frm">
+        검색어 : <input type="text" name="query" placeholder="검색어 입력">
+        <br><br>
+        검색 사이트 : <select name="sitename">
+            <option value="naver">네이버</option>
+            <option value="daum">다음</option>
+        </select>
+
+        <input type="button" value="검색하기" onclick="checkFrm()">
+    </form>
+</body>
+</html>

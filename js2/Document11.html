@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+       function selectAll() {
+            for(let i = 0; i < document.frm1.cb.length; i++) {
+                document.frm1.cb[i].checked = true;
+            }
+        }
+
+        function deleteAll() {
+            for(let i = 0; i < document.frm1.cb.length; i++) {
+                document.frm1.cb[i].checked = false;
+            }
+        }
+        
+    </script>
+
+    <form name="frm1" action="test1.html">
+        <input type="button" value="전체 선택" onclick="selectAll()">
+        <input type="button" value="전체 해제" onclick="deleteAll()">
+        <br><br>
+
+       <input type="checkbox" name="cb" value="사과">사과<br>
+       <input type="checkbox" name="cb" value="딸기">딸기<br>
+       <input type="checkbox" name="cb" value="수박">수박<br>
+       <input type="checkbox" name="cb" value="참외">참외<br>
+       <input type="checkbox" name="cb" value="키위">키위<br>
+
+      
+    </form>
+</body>
+</html>

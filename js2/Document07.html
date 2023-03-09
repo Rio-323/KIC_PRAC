@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+       function checkFrm() {
+           document.frm1.data2.value = document.frm1.data1.value
+            
+        }
+    </script>
+
+    <form name="frm1" action="test1.html">
+        data1 : <input type="text" name="data1" value="값1"><br>
+        <input type="'button" value="내용 읽기" onclick="checkFrm()"></input><br>
+        data2 : <input type="text" name="data2" value="값2"><br>
+    </form>
+</body>
+</html>
