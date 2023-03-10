@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+       function calculatorNum() {
+            let num1 = document.frm.firstNum.value;
+            let num2 = document.frm.lastNum.value;
+            let result = 0;
+
+            if(num1 == '' || num2 == '') {
+                alert('num1과 num2값을 다시 확인해주세요.');
+            } else {
+                let pNum1 = parseInt(document.frm.firstNum.value);
+                let pNum2 = parseInt(document.frm.lastNum.value);
+
+                if(document.frm.sign.options.selectedIndex == 0) {
+                result = pNum1 + pNum2;
+                } else if(document.frm.sign.options.selectedIndex == 1) {
+                result = pNum1 - pNum2;
+                } else if(document.frm.sign.options.selectedIndex == 2) {
+                result = pNum1 * pNum2;
+                }
+
+                document.frm.result.value = result;
+            }
+            
+        }
+  
+    </script>
+
+    <form name="frm">
+        <input type="text" name="firstNum" placeholder="num1">
+        <select name="sign">
+            <option value="+" selected>+</option>
+            <option value="-">-</option>
+            <option value="X">X</option>
+        </select>
+        <input type="text" name="lastNum" placeholder="num2">
+        =
+        <input type="text" name="result" placeholder="결과">
+        <input type="button" value="계산" onclick="calculatorNum()">
+    </form>
+</body>
+</html>

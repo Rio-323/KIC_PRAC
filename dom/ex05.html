@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid black;
+            width: 1000px;
+            border-collapse: collapse
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        const createGugudan = function() {
+            const div = document.querySelector('#result');
+            div.innerHTML = '';
+
+            let html = '';
+
+            let num1 = document.frm.firstNum.value;
+            let num2 = document.frm.lastNum.value;
+
+            if(num1 == '' || num2 == '') {
+                alert('빈칸이 없는지 다시 확인 해주세요');
+            } else if(num1 >= num2 ) {
+                alert('설정한 수에 오류가 있습니다.');
+            } else {
+                let pNum1 = parseInt(document.frm.firstNum.value);
+                let pNum2 = parseInt(document.frm.lastNum.value);
+
+                html += '<table>';
+                for(let i = pNum1; i <= pNum2; i++) {
+                    html += '<tr>';
+                    for(let j = 0; j <= 9; j++) {
+                        if( j == 0) {
+                            html += '<td>' + i + '단' + '</td>';
+                        } else {
+                            html += '<td>' + i + ' X ' + j + ' = ' + (i*j) + '</td>';
+                        }    
+                    }
+                    html += '</tr>';
+                }
+                html += '</table>';
+            }
+            div.innerHTML = html;
+        }
+
+    </script>
+</head>
+<body>
+    <form name="frm">
+        시작 단수 : <input type="text" name="firstNum" placeholder="시작단">
+        ~
+        끝 단수 : <input type="text" name="lastNum" placeholder="끝단">
+
+        <input type="button" value="구구단 출력" onclick="createGugudan()">
+        <br><hr><br>
+        <div id="result"></div>
+    </form>
+</body>
+</html>

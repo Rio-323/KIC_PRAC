@@ -10,12 +10,18 @@
     <script type="text/javascript">
        function checkFrm() {
             let search = document.frm.query.value
-            
-            if(document.frm.sitename.options.selectedIndex == 0) {
-                location.href = `https://search.naver.com/search.naver?query=${search}`;
+            if(search.length <= 1) {
+                alert('1자 이상의 검색어를 입력하셔야 합니다.');
             } else {
+                if(document.frm.sitename.options.selectedIndex == 0) {
+                location.href = `https://search.naver.com/search.naver?query=${search}`;
+                } else if(document.frm.sitename.options.selectedIndex == 1) {
                 location.href = `https://search.daum.net/search?q=${search}`;
+                } else {
+                    location.href = `https://www.google.com/search?q=${search}`;
+                }
             }
+            
         }
         
     </script>
@@ -26,6 +32,7 @@
         검색 사이트 : <select name="sitename">
             <option value="naver">네이버</option>
             <option value="daum">다음</option>
+            <option value="google">구글</option>
         </select>
 
         <input type="button" value="검색하기" onclick="checkFrm()">
